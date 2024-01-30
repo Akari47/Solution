@@ -1,25 +1,63 @@
 #include <stdio.h>
 
 int main(){
-    char a[15];
+    char a[15], temp;
     int n = 0;
-    while (getchar() >= 'A' && getchar() <= 'Z'){
-        scanf("%c", &a[n]);
+    temp = getchar();
+    while (temp >= 'A' && temp <= 'Z'){
+        a[n] = temp; 
+        temp = getchar();
         n++;
     }
-    int m = 4*n+1;
-    char l1[m], l2[m], l3[m], l4[m], l5[m];
-    for (int i = 0; i < m+1; i++){
-        if ((i-2) % 12 == 9){
-            l1[i] = '*';
-        }
-        if ((i-2) % 12 == 1 || (i-2) % 12 == 5){
-            l1[i] = '#';
+    for (int i = 0; i < n; i++){
+        if ((i % 3) == 2){
+            printf("..*.");
         }
         else {
-            l1[i] = '.';
+            printf("..#.");
         }
-        l5[i] = l1[i];
     }
-    
+    printf(".\n");
+    for (int i = 0; i < n; i++){
+        if ((i % 3) == 2){
+            printf(".*.*");
+        }
+        else {
+            printf(".#.#");
+        }        
+    }
+    printf(".\n#");
+    for (int i = 0; i < n; i++){
+        if ((i % 3) == 0){
+            printf(".%c.#", a[i]);
+        }
+        else {
+            printf(".%c.", a[i]);
+            if (i == n-1 && n % 3 == 2){
+                printf("#");
+            }
+            else {
+                printf("*");
+            }
+        }        
+    }
+    printf("\n");
+    for (int i = 0; i < n; i++){
+        if ((i % 3) == 2){
+            printf(".*.*");
+        }
+        else {
+            printf(".#.#");
+        }        
+    }
+    printf(".\n");
+        for (int i = 0; i < n; i++){
+        if ((i % 3) == 2){
+            printf("..*.");
+        }
+        else {
+            printf("..#.");
+        }
+    }
+    printf(".");
 }
