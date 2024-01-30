@@ -5,10 +5,10 @@ int main(){
     x[0] = getchar();
     while (('a' <= x[i] && x[i] <= 'z') || ('A' <= x[i] && x[i] <= 'Z')){
         if('a' <= x[i] && x[i] <= 'z'){
-            s += 1;
+            s++;
         }
         else{
-            c += 1;
+            c++;
         }
         i++;
         x[i] = getchar();
