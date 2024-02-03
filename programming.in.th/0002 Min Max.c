@@ -1,9 +1,9 @@
 #include <stdio.h>
 int main(){
   int n, m, M;
-  scanf("%d", &n);
+  scanf("%i", &n);
   int a[n];
-  scanf("%d", &a[0]);
+  scanf("%i", &a[0]);
   m = a[0];
   M = a[0];
   for (int i = 1; i < n; i++){
@@ -15,6 +15,6 @@ int main(){
           M = a[i];
       }
   }
-    printf("%d\n", m);
-    printf("%d", M);
+    printf("%i\n", m);
+    printf("%i", M);
 }

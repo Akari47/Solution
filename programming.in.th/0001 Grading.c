@@ -1,9 +1,9 @@
 #include <stdio.h>
 int main(){
   int a, b, c, s;
-  scanf("%d", &a);
-  scanf("%d", &b);
-  scanf("%d", &c);
+  scanf("%i", &a);
+  scanf("%i", &b);
+  scanf("%i", &c);
   s = a + b + c;
   if (s >= 80){
     printf("A");
